@@ -1,6 +1,5 @@
 import robots
 
-
 class Melon:
     """Melon."""
 
@@ -28,8 +27,16 @@ class Melon:
             return self.melon_type
         else:
             return f"{self.color} {self.weight:.2f} lbs {self.melon_type}"
-
-
-# FIXME: Add Squash class definition here.
+    
 class Squash(Melon):
-    pass
+    """squash"""
+    def __init__(self):
+        super().__init__('Winter Squash')
+    
+    def prep(self):
+        super().prep()
+        robots.painterbot.paint(self)
+
+
+
+    
